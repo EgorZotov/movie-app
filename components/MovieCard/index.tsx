@@ -4,7 +4,7 @@ import {Card, Poster} from './styled';
 import {getImageFullPath} from '../../api/helpers';
 import {useNavigation} from '@react-navigation/native';
 import {queryClient} from '../../api/queries';
-import {FontContext} from '../../screens/MoviesList/FontContext';
+import {FontContext} from '../../screens/Discover/FontContext';
 
 type Props = React.ComponentProps<typeof Card> & {
   movie: MoviePreview | Movie;

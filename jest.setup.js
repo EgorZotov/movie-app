@@ -3,7 +3,7 @@ import 'react-native-gesture-handler/jestSetup';
 
 // Mock carousel since it is native module
 jest.mock('react-native-reanimated-carousel', () =>
-  require('./__mocks__/ReanimatedCarousel'),
+  require('./__tests__/mocks/ReanimatedCarousel'),
 );
 
 jest.mock('@react-navigation/native', () => {

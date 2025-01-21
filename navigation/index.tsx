@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {MoviesListScreen} from '../screens/MoviesList';
+import {Discover} from '../screens/Discover';
 import {MovieScreen} from '../screens/Movie';
 import {HomeTabsStackParamList, RootStackParamList} from './types';
 import {useTheme} from 'styled-components/native';
@@ -38,7 +38,7 @@ export const TabsStackNavigator = () => {
         options={{
           tabBarIcon: generateTabbarIcon('film'),
         }}
-        component={MoviesListScreen}
+        component={Discover}
       />
       <TabStack.Screen
         name="Wishlist"

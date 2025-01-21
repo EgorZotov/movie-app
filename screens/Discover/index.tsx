@@ -27,7 +27,7 @@ const discoverScreenData: {
   },
 ];
 
-export const MoviesListScreen = () => {
+export const Discover = () => {
   return (
     <ScrollableScreen>
       {discoverScreenData.map(section => (

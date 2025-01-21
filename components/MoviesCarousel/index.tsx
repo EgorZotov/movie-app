@@ -3,7 +3,7 @@ import React from 'react';
 import {ActivityIndicator, useWindowDimensions} from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import {MovieCard} from '../MovieCard';
-import {CarouselWrapper, ErrorPlaceholder} from './styled';
+import {CarouselWrapper, Placeholder} from './styled';
 import {useOrientation} from '../../hooks/useOrientation';
 import {Heading} from '../../styles';
 import Icon from '@react-native-vector-icons/feather';
@@ -23,13 +23,18 @@ export const MoviesCarousel = ({genreId}: Props) => {
   const isLandscape = useOrientation();
   const carouselWidth = width - 42;
   const theme = useTheme();
-  if (isLoading) return <ActivityIndicator />;
+  if (isLoading)
+    return (
+      <Placeholder>
+        <ActivityIndicator />
+      </Placeholder>
+    );
   if (isError || !moviesResponse?.results?.length) {
     return (
-      <ErrorPlaceholder>
+      <Placeholder>
         <Icon name="alert-circle" size={48} color={theme.colors.accent} />
         <Heading size="lg">Unkown error</Heading>
-      </ErrorPlaceholder>
+      </Placeholder>
     );
   }
   return (
