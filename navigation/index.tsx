@@ -64,6 +64,7 @@ export const RootStackNavigator = () => {
         headerStyle: {backgroundColor: theme.colors.screen},
         headerTitleStyle: {color: theme.colors.body},
         headerTintColor: theme.colors.accent,
+        navigationBarColor: theme.colors.screen,
       }}>
       <RootStack.Screen
         name="Home"
